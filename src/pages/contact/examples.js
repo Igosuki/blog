@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../../components/Layout'
+import Seo from '../../components/Seo'
 
 export default class Index extends React.Component {
   render() {
@@ -11,7 +12,7 @@ export default class Index extends React.Component {
             <div className="content">
               <h1>Hi people</h1>
               <p>
-                This is an example site integrating Netlify’s form handling with
+                This is an example site integrating Netlify's form handling with
                 Gatsby
               </p>
               <ul>
@@ -48,3 +49,5 @@ export default class Index extends React.Component {
     )
   }
 }
+
+export const Head = () => <Seo title="Form Examples" />

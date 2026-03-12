@@ -2,6 +2,7 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
+import Seo from '../../components/Seo'
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -36,3 +37,5 @@ export default class BlogIndexPage extends React.Component {
     )
   }
 }
+
+export const Head = () => <Seo title="Blog" />

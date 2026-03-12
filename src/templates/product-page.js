@@ -6,6 +6,7 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Seo from '../components/Seo'
 
 export const ProductPageTemplate = ({
   image,
@@ -157,6 +158,10 @@ ProductPage.propTypes = {
 }
 
 export default ProductPage
+
+export const Head = ({ data }) => (
+  <Seo title={data.markdownRemark.frontmatter.title} />
+)
 
 export const productPageQuery = graphql`
   query ProductPage($id: String!) {

@@ -1,8 +1,8 @@
 import React from 'react'
 import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import Seo from '../../components/Seo'
 
 const TagsPage = ({
   data: {
@@ -14,7 +14,6 @@ const TagsPage = ({
 }) => (
   <Layout>
     <section className="section">
-      <Helmet title={`Tags | ${title}`} />
       <div className="container content">
         <div className="columns">
           <div
@@ -40,6 +39,10 @@ const TagsPage = ({
 
 export default TagsPage
 
+export const Head = ({ data }) => (
+  <Seo title={`Tags | ${data.site.siteMetadata.title}`} />
+)
+
 export const tagPageQuery = graphql`
   query TagsQuery {
     site {
@@ -48,7 +51,7 @@ export const tagPageQuery = graphql`
       }
     }
     allMarkdownRemark(limit: 1000) {
-      group(field: frontmatter___tags) {
+      group(field: { frontmatter: { tags: SELECT } }) {
         fieldValue
         totalCount
       }

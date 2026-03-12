@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby'
 import Layout from '../../components/Layout'
+import Seo from '../../components/Seo'
 
 function encode(data) {
   const formData = new FormData()
@@ -59,7 +60,7 @@ export default class Contact extends React.Component {
                 <input type="hidden" name="form-name" value="file-upload" />
                 <div hidden>
                   <label>
-                    Don’t fill this out:{' '}
+                    Don't fill this out:{' '}
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
@@ -106,3 +107,5 @@ export default class Contact extends React.Component {
     )
   }
 }
+
+export const Head = () => <Seo title="File Upload" />

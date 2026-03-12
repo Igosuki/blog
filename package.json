@@ -5,12 +5,11 @@
   "author": "Austin Green",
   "dependencies": {
     "bulma": "^1.0.0",
-    "gatsby": "^5.13.0",
+    "gatsby": "^5.16.0",
     "gatsby-plugin-image": "^3.13.0",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-decap-cms": "^4.0.4",
     "gatsby-plugin-purgecss": "^6.2.0",
-    "gatsby-plugin-react-helmet": "^6.13.0",
     "gatsby-plugin-sass": "^6.13.0",
     "gatsby-plugin-sharp": "^5.13.0",
     "gatsby-remark-copy-linked-files": "^6.13.0",
@@ -20,13 +19,12 @@
     "gatsby-transformer-remark": "^6.13.0",
     "gatsby-transformer-sharp": "^5.13.0",
     "lodash": "^4.17.21",
-    "decap-cms-app": "3.6.4",
+    "decap-cms-app": "^3.9.0",
     "decap-cms-media-library-cloudinary": "^3.0.0",
     "decap-cms-media-library-uploadcare": "^3.0.0",
     "prop-types": "^15.8.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-helmet": "^6.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "sass": "^1.77.0",
     "uuid": "^10.0.0"
   },
@@ -36,6 +34,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "postinstall": "node scripts/patch-react-umd.js",
     "clean": "gatsby clean",
     "start": "npm run develop",
     "build": "npm run clean && gatsby build",
@@ -45,5 +44,8 @@
   },
   "devDependencies": {
     "prettier": "^3.3.0"
+  },
+  "overrides": {
+    "react-scroll-sync": "0.11.2"
   }
 }

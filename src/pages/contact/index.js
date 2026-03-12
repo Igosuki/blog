@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby'
 import Layout from '../../components/Layout'
+import Seo from '../../components/Seo'
 
 function encode(data) {
   return Object.keys(data)
@@ -52,7 +53,7 @@ export default class Index extends React.Component {
                 <input type="hidden" name="form-name" value="contact" />
                 <div hidden>
                   <label>
-                    Don’t fill this out:{' '}
+                    Don't fill this out:{' '}
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
@@ -113,3 +114,5 @@ export default class Index extends React.Component {
     )
   }
 }
+
+export const Head = () => <Seo title="Contact" />
