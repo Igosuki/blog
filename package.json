@@ -19,7 +19,7 @@
     "gatsby-transformer-remark": "^6.13.0",
     "gatsby-transformer-sharp": "^5.13.0",
     "lodash": "^4.17.21",
-    "decap-cms-app": "^3.9.0",
+    "decap-cms-app": "^3.10.1",
     "decap-cms-media-library-cloudinary": "^3.0.0",
     "decap-cms-media-library-uploadcare": "^3.0.0",
     "prop-types": "^15.8.1",
@@ -46,6 +46,14 @@
     "prettier": "^3.3.0"
   },
   "overrides": {
-    "react-scroll-sync": "0.11.2"
+    "react": "$react",
+    "react-dom": "$react-dom",
+    "react-scroll-sync": "0.11.2",
+    "slate-base64-serializer": {
+      "slate": "0.118.1"
+    },
+    "slate-plain-serializer": {
+      "slate": "0.118.1"
+    }
   }
 }
