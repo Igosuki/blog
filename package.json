@@ -18,7 +18,7 @@
     "gatsby-source-filesystem": "^5.13.0",
     "gatsby-transformer-remark": "^6.13.0",
     "gatsby-transformer-sharp": "^5.13.0",
-    "lodash": "^4.17.21",
+    "lodash": "^4.18.1",
     "decap-cms-app": "^3.10.1",
     "decap-cms-media-library-cloudinary": "^3.0.0",
     "decap-cms-media-library-uploadcare": "^3.0.0",
